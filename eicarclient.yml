@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eicarclient
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eicarclient
+    spec:
+      containers:
+      - name: eicarclient
+        image: mawinkler/eicarclient:0.1
+        imagePullPolicy: Always
